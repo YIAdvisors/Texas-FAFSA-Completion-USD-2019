@@ -51,7 +51,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[26.058838986339694,-102.82490314266417],[34.28410337990638,-87.54248485284076]]);
+        }).fitBounds([[26.608387009864796,-106.12666018058898],[34.78921840261725,-90.84424189076557]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var bounds_group = new L.featureGroup([]);
@@ -301,21 +301,6 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(147,10,18,1.0)',
-                interactive: true,
-            }
-                    break;
-                default:
-                    return {
-                pane: 'pane_tl_2019_48_unsdvirtual_1',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(103,0,13,1.0)',
                 interactive: true,
             }
                     break;
