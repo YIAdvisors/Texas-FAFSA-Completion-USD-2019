@@ -31,7 +31,7 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/tl_2019_48_unsd_1.js"></script>
+        <script src="data/tl_2019_48_unsdvirtual_1.js"></script>
         <script src="data/cacmemberstx_2.js"></script>
         <script>
         var highlightLayer;
@@ -51,7 +51,7 @@
         }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[24.3833874047522,-107.14077857147655],[38.64569687452702,-93.16339141368533]]);
+        }).fitBounds([[26.058838986339694,-102.82490314266417],[34.28410337990638,-87.54248485284076]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var bounds_group = new L.featureGroup([]);
@@ -67,7 +67,7 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_tl_2019_48_unsd_1(feature, layer) {
+        function pop_tl_2019_48_unsdvirtual_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -78,22 +78,25 @@
             });
             var popupContent = '<table>\
                     <tr>\
+                        <td colspan="2">' + (feature.properties['uid'] !== null ? Autolinker.link(feature.properties['uid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
                         <th scope="row">District Name:</th>\
                         <td>' + (feature.properties['tx-isd-completion rate-final_District Name'] !== null ? Autolinker.link(feature.properties['tx-isd-completion rate-final_District Name'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">2019 FAFSA Completion Rate (est. percentage)</th>\
+                        <th scope="row">tx-isd-completion rate-final_Estimated-FAFSA-Completion-Percentage-Nov22-2019</th>\
                         <td>' + (feature.properties['tx-isd-completion rate-final_Estimated-FAFSA-Completion-Percentage-Nov22-2019'] !== null ? Autolinker.link(feature.properties['tx-isd-completion rate-final_Estimated-FAFSA-Completion-Percentage-Nov22-2019'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_tl_2019_48_unsd_1_0(feature) {
+        function style_tl_2019_48_unsdvirtual_1_0(feature) {
             switch(String(feature.properties['tx-isd-completion rate-final_Estimated-FAFSA-Completion-Percentage-Nov22-2019'])) {
                 case ' 20-24':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -108,7 +111,7 @@
                     break;
                 case ' 25-29':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -123,7 +126,7 @@
                     break;
                 case ' 30-34':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -138,7 +141,7 @@
                     break;
                 case ' 35-39':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -153,7 +156,7 @@
                     break;
                 case ' 40-44':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -168,7 +171,7 @@
                     break;
                 case ' 45-49':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -183,7 +186,7 @@
                     break;
                 case ' 50-54':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -198,7 +201,7 @@
                     break;
                 case ' 55-59':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -213,7 +216,7 @@
                     break;
                 case ' 60-64':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -228,7 +231,7 @@
                     break;
                 case ' 65-69':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -243,7 +246,7 @@
                     break;
                 case ' 70-74':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -258,7 +261,7 @@
                     break;
                 case ' 75-79':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -273,7 +276,7 @@
                     break;
                 case '<20':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -288,7 +291,7 @@
                     break;
                 case '>=80':
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -303,7 +306,7 @@
                     break;
                 default:
                     return {
-                pane: 'pane_tl_2019_48_unsd_1',
+                pane: 'pane_tl_2019_48_unsdvirtual_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -318,20 +321,20 @@
                     break;
             }
         }
-        map.createPane('pane_tl_2019_48_unsd_1');
-        map.getPane('pane_tl_2019_48_unsd_1').style.zIndex = 401;
-        map.getPane('pane_tl_2019_48_unsd_1').style['mix-blend-mode'] = 'normal';
-        var layer_tl_2019_48_unsd_1 = new L.geoJson(json_tl_2019_48_unsd_1, {
-            attribution: '',
+        map.createPane('pane_tl_2019_48_unsdvirtual_1');
+        map.getPane('pane_tl_2019_48_unsdvirtual_1').style.zIndex = 401;
+        map.getPane('pane_tl_2019_48_unsdvirtual_1').style['mix-blend-mode'] = 'normal';
+        var layer_tl_2019_48_unsdvirtual_1 = new L.geoJson(json_tl_2019_48_unsdvirtual_1, {
+            attribution: '<a href="">Data courtesy of Young Invincibles and the U.S. Department of Education</a>',
             interactive: true,
-            dataVar: 'json_tl_2019_48_unsd_1',
-            layerName: 'layer_tl_2019_48_unsd_1',
-            pane: 'pane_tl_2019_48_unsd_1',
-            onEachFeature: pop_tl_2019_48_unsd_1,
-            style: style_tl_2019_48_unsd_1_0,
+            dataVar: 'json_tl_2019_48_unsdvirtual_1',
+            layerName: 'layer_tl_2019_48_unsdvirtual_1',
+            pane: 'pane_tl_2019_48_unsdvirtual_1',
+            onEachFeature: pop_tl_2019_48_unsdvirtual_1,
+            style: style_tl_2019_48_unsdvirtual_1_0,
         });
-        bounds_group.addLayer(layer_tl_2019_48_unsd_1);
-        map.addLayer(layer_tl_2019_48_unsd_1);
+        bounds_group.addLayer(layer_tl_2019_48_unsdvirtual_1);
+        map.addLayer(layer_tl_2019_48_unsdvirtual_1);
         function pop_cacmemberstx_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -350,6 +353,12 @@
                         <th scope="row">City</th>\
                         <td>' + (feature.properties['City'] !== null ? Autolinker.link(feature.properties['City'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['lat'] !== null ? Autolinker.link(feature.properties['lat'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['long'] !== null ? Autolinker.link(feature.properties['long'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
@@ -367,7 +376,7 @@
                 weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(15,62,250,1.0)',
+                fillColor: 'rgba(7,19,255,1.0)',
                 interactive: true,
             }
         }
